@@ -1,0 +1,193 @@
+.featured-section {
+  padding-top: 20px;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.featured-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.featured-heading-row h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.featured-view-all {
+  color: #7a1b41;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  transition: color 0.2s;
+}
+
+.featured-view-all:hover {
+  text-decoration: underline;
+  color: #562344;
+}
+
+/* Grid layout */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* Updated Card Style matching the screenshot */
+.featured-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border-radius: 12px;
+  padding: 8px; /* Internal padding for the border */
+  border: 1px solid #f0f0f0;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.featured-image-wrapper {
+  position: relative;
+  border-radius: 8px; /* Slightly tighter radius inside the card */
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  background-color: #fdf6f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.featured-image-wrapper img {
+  width: 90%; /* Image containment matching screenshot styling */
+  height: 90%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.featured-card:hover .featured-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.featured-image-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bd2861;
+  font-size: 14px;
+}
+
+/* Typography and Layout for Details */
+.featured-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+  padding: 0 4px 4px 4px;
+}
+
+.featured-details h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Price Row Layout */
+.featured-priceRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.featured-currentPrice {
+  font-size: 14px;
+  color: #562344;
+  font-weight: 700;
+}
+
+.featured-originalPrice {
+  font-size: 12px;
+  font-weight: 600;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.featured-discountBadge {
+  background-color: #562344;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.featured-card-skeleton {
+  border-radius: 12px;
+  background: #f9f9f9;
+  aspect-ratio: 1 / 1;
+}
+
+.featured-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9e7e5;
+  margin-bottom: 12px;
+}
+
+.featured-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+@media (max-width: 1200px) {
+  .featured-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}

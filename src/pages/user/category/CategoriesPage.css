@@ -1,0 +1,224 @@
+:root {
+  --page-bg: #fdf5f5; /* Soft light pink background */
+  --text-dark: #3a222e; /* Dark maroon for titles */
+  --text-muted: #7a6069;
+  --accent-pink: #c04c6f;
+  --card-bg: #fffcfd;
+}
+
+.CategoriesPage {
+  background-color: var(--page-bg);
+  min-height: 100vh;
+  padding: 40px 5% 80px 5%;
+  font-family: "Poppins", system-ui, sans-serif;
+  /* Optional: Background pattern hooks can go here */
+}
+
+/* --- Hero Section --- */
+.CategoriesPage-hero {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+
+.CategoriesPage-breadcrumb {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.CategoriesPage-breadcrumb a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.CategoriesPage-breadcrumb a:hover {
+  color: var(--accent-pink);
+}
+
+.CategoriesPage-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 12px 0;
+  letter-spacing: -0.02em;
+}
+
+.CategoriesPage-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: var(--accent-pink);
+  opacity: 0.7;
+}
+
+.CategoriesPage-line {
+  height: 1px;
+  width: 60px;
+  background-color: var(--accent-pink);
+  opacity: 0.4;
+}
+
+.CategoriesPage-heart {
+  font-size: 18px;
+}
+
+.CategoriesPage-subtitle {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* --- Grid Section --- */
+.CategoriesPage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* --- Card Styles --- */
+.CategoriesCard {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.CategoriesCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+}
+
+.CategoriesCard-imageWrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #f4eaec;
+}
+
+.CategoriesCard-imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.CategoriesCard:hover .CategoriesCard-imageWrapper img {
+  transform: scale(1.05);
+}
+
+.CategoriesCard-footer {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--card-bg);
+  border-top: 1px solid rgba(192, 76, 111, 0.08); /* Very subtle pink border matching image */
+}
+
+.CategoriesCard-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.CategoriesCard-icon {
+  color: var(--accent-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CategoriesCard-name {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.CategoriesCard-arrow {
+  color: var(--text-muted);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.CategoriesCard:hover .CategoriesCard-arrow {
+  color: var(--accent-pink);
+  transform: translateX(4px);
+}
+
+/* ----------------------------------------------------
+   MOBILE RESPONSIVENESS
+------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .CategoriesPage-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .CategoriesPage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .CategoriesPage-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 500px) {
+  .CategoriesPage {
+    padding: 30px 5% 60px 5%;
+  }
+
+  .CategoriesPage-grid {
+    /* Keeping 2 columns on mobile based on your earlier setups */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .CategoriesCard-footer {
+    padding: 12px 10px;
+    gap: 8px;
+  }
+
+  .CategoriesCard-info {
+    gap: 6px;
+  }
+
+  .CategoriesCard-name {
+    font-size: 12px; /* Prevent text wrap on small screens */
+  }
+
+  .CategoriesCard-arrow {
+    display: none; /* Hide arrow on very small screens to save space */
+  }
+
+  .CategoriesPage-title {
+    font-size: 28px;
+  }
+
+  .CategoriesPage-subtitle {
+    font-size: 13px;
+  }
+}

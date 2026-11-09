@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.policies-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 5%;
+  font-family: "Poppins", sans-serif;
+  color: #333333;
+}
+
+.policy-section {
+  margin-bottom: 48px;
+  padding: 24px 32px;
+  border: 1px solid #eaddd7;
+  border-radius: 12px;
+}
+
+.policy-section h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  color: #562344;
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f4dfe9;
+}
+
+.policy-item {
+  margin-bottom: 28px;
+}
+
+.policy-item:last-child {
+  margin-bottom: 0;
+}
+
+.policy-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c2925;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.policy-item p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a453f;
+  margin: 0 0 12px 0;
+}
+
+.policy-item p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-item strong {
+  color: #2c2925;
+  font-weight: 600;
+}
+
+.policy-item ul {
+  margin: 0 0 12px 0;
+  padding-left: 24px;
+}
+
+.policy-item li {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a453f;
+  margin-bottom: 8px;
+}
+
+.policy-item li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .policies-container {
+    padding: 24px 5%;
+  }
+
+  .policy-section {
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+
+  .policy-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .policy-item h3 {
+    font-size: 18px;
+  }
+
+  .policy-item p,
+  .policy-item li {
+    font-size: 16px;
+  }
+}

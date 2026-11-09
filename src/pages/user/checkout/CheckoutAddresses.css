@@ -1,0 +1,285 @@
+.AddressSelection {
+  font-family: Arial, sans-serif;
+  color: #0f1111;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.AddressSelection-loading {
+  padding: 4rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.AddressSelection-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+.AddressSelection-error {
+  background-color: #fef1f2;
+  border: 1px solid #e30000;
+  color: #c40000;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* List Formatting based on image 1 */
+.AddressSelection-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.AddressSelection-item {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  align-items: flex-start;
+}
+
+.AddressSelection-itemSelected {
+  background-color: #fcfcfc;
+}
+
+/* Custom Radio Button */
+.AddressSelection-radioWrapper {
+  padding-top: 0.2rem;
+}
+
+.AddressSelection-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #888c8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: all 0.1s ease;
+}
+
+.AddressSelection-radioActive {
+  border-color: var(--primary);
+}
+
+.AddressSelection-radioDot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+/* Address Text */
+.AddressSelection-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.AddressSelection-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.AddressSelection-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Inline Links */
+.AddressSelection-inlineLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.AddressSelection-inlineLinks button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.AddressSelection-inlineLinks button:hover {
+  text-decoration: underline;
+}
+
+.AddressSelection-inlineLinks span {
+  color: #888c8c;
+  font-size: 0.9rem;
+}
+
+/* Action Links */
+.AddressSelection-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.AddressSelection-linkBtn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: var(--primary);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.AddressSelection-linkBtn:hover {
+  text-decoration: underline;
+}
+
+.AddressSelection-linkDropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.AddressSelection-submitBtn {
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Modal Styling based on image 2 */
+.AddressModal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.AddressModal {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.AddressModal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: #f0f2f2;
+  border-bottom: 1px solid #d5d9d9;
+  border-radius: 8px 8px 0 0;
+}
+
+.AddressModal-header h3 {
+  margin: 0;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.AddressModal-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #0f1111;
+}
+
+.AddressModal-body {
+  padding: 1.5rem;
+}
+
+.AddressModal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+.AddressModal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.AddressModal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.AddressModal-field label {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.AddressModal-field input,
+.AddressModal-field select {
+  padding: 0.5rem;
+  border: 1px solid #888c8c;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: Arial, sans-serif;
+  outline: none;
+  background-color: #fff;
+}
+
+.AddressModal-field input:focus,
+.AddressModal-field select:focus {
+  border-color: #007185;
+  box-shadow: 0 0 0 3px #c8f3fa;
+}
+
+.AddressModal-hint {
+  font-size: 0.75rem;
+  color: #565959;
+}
+
+.AddressModal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.AddressModal-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d5d9d9;
+}
+
+.AddressModal-submitBtn {
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(15, 17, 17, 0.15);
+  width: 100%;
+}

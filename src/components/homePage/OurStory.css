@@ -1,0 +1,317 @@
+/* =========================================
+   Variables & Theme Defaults
+   ========================================= */
+:root {
+  --bg-cream: #fbf8f5;
+  --bg-offset: #f3eae3;
+  --text-dark: #3a3229;
+  --text-muted: #7a6b5c;
+  --accent-pink: #d58b96;
+  --white: #ffffff;
+}
+
+/* =========================================
+   Base Layout
+   ========================================= */
+.OurStory {
+  background-color: var(--white); /* Contrasts with the cream sections */
+  padding: 6rem 1.5rem;
+  padding-top: 4rem;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow: hidden;
+}
+
+.OurStory-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* =========================================
+   Left Side: Visuals
+   ========================================= */
+.OurStory-visual {
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+/* Offset background shape for depth */
+.OurStory-visual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 10%;
+  left: 5%;
+  right: 15%;
+  background-color: var(--bg-offset);
+  border-radius: 200px 200px 20px 20px;
+  z-index: 0;
+  transform: rotate(-3deg);
+}
+
+.OurStory-imageFrame {
+  position: relative;
+  border-radius: 200px 200px 20px 20px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  border: 10px solid var(--white);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  background-color: #eee;
+}
+
+.OurStory-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.OurStory-visual:hover .OurStory-image {
+  transform: scale(1.03);
+}
+
+/* Decorative Floating Elements */
+.OurStory-decoration {
+  position: absolute;
+  color: var(--accent-pink);
+  opacity: 0.4;
+  z-index: 1;
+  animation: floatSlow 6s ease-in-out infinite alternate;
+}
+
+.OurStory-decorationTop {
+  font-size: 2.5rem;
+  top: 10%;
+  right: 5%;
+  transform: rotate(15deg);
+}
+
+.OurStory-decorationBottom {
+  font-size: 2rem;
+  bottom: 5%;
+  left: 0;
+  transform: rotate(-20deg);
+  animation-delay: 1s;
+}
+
+/* Paper Stamp Note */
+.OurStory-note {
+  position: absolute;
+  bottom: 15%;
+  right: -10%;
+  width: 110px;
+  height: 110px;
+  background-color: var(--bg-cream);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 2px dashed var(--accent-pink);
+  z-index: 3;
+  transform: rotate(8deg);
+  animation: floatSlow 5s ease-in-out infinite alternate-reverse;
+}
+
+.OurStory-note span {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.OurStory-note strong {
+  font-size: 0.85rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  color: var(--accent-pink);
+  line-height: 1.1;
+  margin-top: 4px;
+}
+
+/* =========================================
+   Right Side: Content
+   ========================================= */
+.OurStory-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.OurStory-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-pink);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.OurStory-eyebrow span {
+  font-size: 1.1rem;
+}
+
+.OurStory-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.15;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.OurStory-title em {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent-pink);
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.OurStory-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 1.2rem 0;
+  max-width: 500px;
+}
+
+.OurStory-signature {
+  margin: 2rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Caveat", "Playfair Display", cursive; /* Cursive touch */
+  transform: rotate(-3deg);
+}
+
+.OurStory-signature span {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.OurStory-signature strong {
+  font-size: 1.4rem;
+  color: var(--accent-pink);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* =========================================
+   Button
+   ========================================= */
+.OurStory-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--white);
+  color: var(--text-dark);
+  padding: 1rem 2.2rem;
+  border-radius: 99px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-light, #eadfda);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.OurStory-button:hover {
+  background-color: var(--accent-pink);
+  color: var(--white);
+  border-color: var(--accent-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(213, 139, 150, 0.25);
+}
+
+.OurStory-button svg {
+  transition: transform 0.3s ease;
+}
+
+.OurStory-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   Animations
+   ========================================= */
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0) rotate(inherit);
+  }
+  100% {
+    transform: translateY(-15px) rotate(inherit);
+  }
+}
+
+/* =========================================
+   Responsive Adjustments
+   ========================================= */
+@media (max-width: 992px) {
+  .OurStory-container {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+
+  .OurStory-visual {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .OurStory-content {
+    align-items: center;
+  }
+
+  .OurStory-description {
+    max-width: 600px;
+  }
+
+  .OurStory-signature {
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .OurStory {
+    padding: 4rem 1.5rem;
+  }
+
+  .OurStory-note {
+    width: 90px;
+    height: 90px;
+    right: -5%;
+    bottom: 5%;
+  }
+
+  .OurStory-note span {
+    font-size: 0.55rem;
+  }
+
+  .OurStory-note strong {
+    font-size: 0.75rem;
+  }
+
+  .OurStory-title {
+    font-size: 2.2rem;
+  }
+
+  .OurStory-description {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,155 @@
+.CheckoutPayment {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  /* margin-bottom: 2rem; */
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.CheckoutPayment-header {
+  margin-bottom: 1.25rem;
+}
+
+.CheckoutPayment-titleWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.CheckoutPayment-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f1111;
+  margin: 0 0 0.25rem 0;
+}
+
+.CheckoutPayment-subtitle {
+  font-size: 0.85rem;
+  color: #565959;
+  margin: 0;
+}
+
+.CheckoutPayment-card {
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.CheckoutPayment-cardSelected {
+  border-color: var(--primary);
+}
+
+.CheckoutPayment-cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.CheckoutPayment-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #888c8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.CheckoutPayment-cardSelected .CheckoutPayment-radio {
+  border-color: var(--primary);
+}
+
+.CheckoutPayment-radioDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.CheckoutPayment-icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #d5d9d9;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f1111;
+}
+
+.CheckoutPayment-info strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f1111;
+  margin-bottom: 0.2rem;
+}
+
+.CheckoutPayment-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #565959;
+}
+
+.CheckoutPayment-logos {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.CheckoutPayment-logoText {
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #374151;
+}
+
+.CheckoutPayment-visa {
+  color: #1a1f71;
+}
+
+.CheckoutPayment-mcCircles {
+  display: flex;
+  align-items: center;
+}
+
+.CheckoutPayment-mcRed {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #eb001b;
+  margin-right: -4px;
+  z-index: 2;
+}
+
+.CheckoutPayment-mcYellow {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f79e1b;
+}
+
+.CheckoutPayment-secureNote {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #565959;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .CheckoutPayment-logos {
+    display: none;
+  }
+}

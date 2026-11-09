@@ -1,0 +1,225 @@
+.CheckoutSummary {
+  background-color: var(--white);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  padding: 2rem;
+  position: sticky;
+  top: 2rem;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.CheckoutSummary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.CheckoutSummary-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.CheckoutSummary-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.CheckoutSummary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.CheckoutSummary-item {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 1rem;
+  align-items: start;
+}
+
+.CheckoutSummary-image {
+  width: 56px;
+  height: 56px;
+  background-color: var(--bg-cream);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CheckoutSummary-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.CheckoutSummary-product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.CheckoutSummary-productName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.CheckoutSummary-productPrice,
+.CheckoutSummary-productQty {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.CheckoutSummary-itemTotal {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.CheckoutSummary-pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.CheckoutSummary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.CheckoutSummary-row strong {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.CheckoutSummary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.CheckoutSummary-totalAmount {
+  font-size: 1.25rem;
+}
+
+.CheckoutSummary-payBtn {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+
+.CheckoutSummary-payBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.CheckoutSummary-secure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.CheckoutSummary-footer {
+  background-color: var(--bg-cream);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.CheckoutSummary-flowerIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.CheckoutSummary-footer p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .CheckoutSummary {
+    padding: 1.5rem;
+    width: 90%;
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .CheckoutSummary {
+    position: static;
+    /* margin-top: 2rem; */
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .CheckoutSummary {
+    padding: 1.25rem;
+  }
+
+  .CheckoutSummary-title {
+    font-size: 1.25rem;
+  }
+
+  .CheckoutSummary-item {
+    gap: 0.75rem;
+  }
+
+  .CheckoutSummary-productName {
+    font-size: 0.85rem;
+  }
+
+  .CheckoutSummary-itemTotal {
+    font-size: 0.9rem;
+  }
+
+  .CheckoutSummary-total {
+    font-size: 1rem;
+  }
+
+  .CheckoutSummary-totalAmount {
+    font-size: 1.15rem;
+  }
+
+  .CheckoutSummary-payBtn {
+    padding: 0.85rem;
+    font-size: 0.95rem;
+  }
+}

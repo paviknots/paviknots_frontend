@@ -1,0 +1,378 @@
+:root {
+  --bg-main: #faf7f2;
+  --bg-white: #ffffff;
+  --text-dark: #0f1111;
+  --text-light: #565959;
+  --border-light: #e5e7eb;
+  --link-blue: #007185;
+  --link-hover: #c45500;
+  --success-bg: #198754;
+  --success-text: #ffffff;
+  --error-bg: #f05052;
+  --error-text: #ffffff;
+  --warning-bg: #f9ce5b;
+  --warning-text: #ffffff;
+}
+
+/* --- Layout & Base --- */
+.AdminDiscounts {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  min-height: 100vh;
+  padding: 2rem 1.5rem 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* --- Top Bar --- */
+.AdminDiscounts-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.AdminDiscounts-back {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.AdminDiscounts-back:hover {
+  text-decoration: underline;
+}
+
+.AdminDiscounts-addButton {
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.AdminDiscounts-addButton:hover {
+  background-color: #000000;
+}
+
+/* --- Header --- */
+.AdminDiscounts-header {
+  margin-bottom: 2rem;
+}
+
+.AdminDiscounts-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+  color: var(--text-dark);
+}
+
+.AdminDiscounts-header p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* --- Summary Box --- */
+.AdminDiscounts-stats {
+  display: flex;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-white);
+  gap: 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.AdminDiscounts-stats article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-right: 1px solid var(--border-light);
+}
+
+.AdminDiscounts-stats article:last-child {
+  border-right: none;
+}
+
+.AdminDiscounts-stats article span {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.AdminDiscounts-stats article strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* --- Card Wrapper --- */
+.AdminDiscounts-tableCard {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background-color: var(--bg-white);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.AdminDiscounts-tableHeader {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfdfd;
+}
+
+.AdminDiscounts-tableHeader h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.AdminDiscounts-tableHeader span {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* --- Filters --- */
+.AdminDiscounts-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  flex-wrap: wrap;
+}
+
+.AdminDiscounts-filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.AdminDiscounts-filters input,
+.AdminDiscounts-filters select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  min-width: 200px;
+  color: var(--text-dark);
+}
+
+.AdminDiscounts-filters input:focus,
+.AdminDiscounts-filters select:focus {
+  border-color: var(--link-blue);
+}
+
+.AdminDiscounts-clear {
+  background: transparent;
+  border: none;
+  color: var(--link-blue);
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.AdminDiscounts-clear:hover {
+  text-decoration: underline;
+}
+
+/* --- Table --- */
+.AdminDiscounts-tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.AdminDiscounts-tableWrap table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.AdminDiscounts-tableWrap th {
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-light);
+  background-color: #fdfdfd;
+}
+
+.AdminDiscounts-tableWrap td {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.AdminDiscounts-tableWrap tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Table Cells --- */
+.AdminDiscounts-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.AdminDiscounts-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  border: 1px solid var(--border-light);
+  flex-shrink: 0;
+}
+
+.AdminDiscounts-name div {
+  display: flex;
+  flex-direction: column;
+}
+
+.AdminDiscounts-name strong {
+  font-weight: 500;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.AdminDiscounts-name small {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+}
+
+/* --- Status Badges --- */
+.AdminDiscounts-status {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.AdminDiscounts-status.is-active {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.AdminDiscounts-status.is-inactive,
+.AdminDiscounts-status.is-expired {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+}
+
+.AdminDiscounts-status.is-scheduled {
+  background-color: var(--warning-bg);
+  color: var(--text-dark);
+}
+
+/* --- Actions --- */
+.AdminDiscounts-edit {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.AdminDiscounts-edit:hover {
+  text-decoration: underline;
+}
+
+/* --- Loading / Empty States --- */
+.AdminDiscounts-state {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.AdminDiscounts-error {
+  color: var(--error-text);
+}
+
+.AdminDiscounts-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 2rem 0;
+  color: var(--text-light);
+}
+
+.AdminDiscounts-empty svg {
+  font-size: 2.5rem;
+  color: var(--border-light);
+}
+
+.AdminDiscounts-empty strong {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+  .AdminDiscounts-stats {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .AdminDiscounts-stats article {
+    flex: 1 1 calc(50% - 1rem);
+    border-right: none;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .AdminDiscounts-stats article:nth-last-child(-n + 2) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .AdminDiscounts {
+    padding: 1.5rem 1rem;
+  }
+  .AdminDiscounts-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .AdminDiscounts-filters input,
+  .AdminDiscounts-filters select {
+    min-width: 100%;
+  }
+}

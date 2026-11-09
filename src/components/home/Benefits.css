@@ -1,0 +1,96 @@
+:root {
+  --primary: #bd2861; /* The pink/red color from your design */
+  --muted: #777;
+  --border: #f0f0f0;
+}
+
+.benefits-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 24px 5%;
+  background: white;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.benefit-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-right: 1px solid var(--border);
+  padding: 0 15px;
+}
+
+.benefit-item:last-child {
+  border-right: none;
+}
+
+.benefit-icon {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.benefit-item h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.benefit-item p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ----------------------------------------------------
+   MOBILE RESPONSIVENESS (Matches your screenshot exactly)
+------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .benefits-section {
+    /* Create a 2x2 grid */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 5%;
+  }
+
+  .benefit-item {
+    border-right: none; /* Remove vertical borders completely */
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
+
+  /* Add a horizontal divider line under the first two items (the top row) */
+  .benefit-item:nth-child(1),
+  .benefit-item:nth-child(2) {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-item {
+    gap: 10px;
+    padding: 20px 0; /* Tighter padding for small screens */
+  }
+
+  .benefit-item h3 {
+    font-size: 12px;
+  }
+
+  .benefit-item p {
+    font-size: 10px;
+  }
+  
+  .benefit-icon {
+    transform: scale(0.85); /* Shrinks the icons slightly to fit the text better */
+  }
+}

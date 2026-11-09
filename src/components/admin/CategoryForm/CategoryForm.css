@@ -1,0 +1,291 @@
+.CategoryForm {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Layout Split --- */
+.CategoryForm-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.CategoryForm-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.CategoryForm-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Cards --- */
+.CategoryForm-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.CategoryForm-cardHeader {
+  margin-bottom: 1.5rem;
+}
+
+.CategoryForm-cardHeader h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.25rem 0;
+}
+
+.CategoryForm-cardHeader p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* --- Fields Grid --- */
+.CategoryForm-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.CategoryForm-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.CategoryForm-fieldFull {
+  grid-column: 1 / -1;
+}
+
+.CategoryForm-field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  gap: 0.25rem;
+}
+
+.CategoryForm-field label span {
+  color: var(--error-text);
+}
+
+.CategoryForm-field input,
+.CategoryForm-field select,
+.CategoryForm-field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.CategoryForm-field input:focus,
+.CategoryForm-field select:focus,
+.CategoryForm-field textarea:focus {
+  border-color: var(--accent-pink);
+}
+
+.CategoryForm-field input:disabled,
+.CategoryForm-field select:disabled,
+.CategoryForm-field textarea:disabled {
+  background-color: #f9fafb;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.CategoryForm-field textarea {
+  resize: vertical;
+}
+
+.CategoryForm-help {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+.CategoryForm-error {
+  color: red;
+  font-size: 0.8rem;
+  /* font-weight: 500; */
+  margin-top: 0.2rem;
+}
+
+/* --- Image Upload Section --- */
+.CategoryForm-imageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.CategoryForm-imagePreview {
+  width: 100%;
+  aspect-ratio: 1; /* Keeps the preview square */
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CategoryForm-imagePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.CategoryForm-imageEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  gap: 0.5rem;
+}
+
+.CategoryForm-imageEmpty span {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.CategoryForm-imageEmpty p {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.CategoryForm-fileInput {
+  display: none;
+}
+
+.CategoryForm-imageActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.CategoryForm-imageButton {
+  background-color: #f3f4f6;
+  border: 1px solid var(--border-light);
+  color: var(--text-dark);
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.CategoryForm-imageButton:hover:not(:disabled) {
+  background-color: #e5e7eb;
+}
+
+.CategoryForm-removeButton {
+  background-color: var(--bg-white);
+  color: black;
+  padding: 0.7rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  /* background-color: var(--error-bg); */
+  border: 1px solid black;
+}
+
+.CategoryForm-imageHelp {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin: 0;
+  text-align: center;
+}
+
+/* --- Bottom Actions --- */
+.CategoryForm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.CategoryForm-cancel {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  color: var(--text-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.CategoryForm-cancel:hover:not(:disabled) {
+  background-color: #f9fafb;
+}
+
+.CategoryForm-submit {
+  background-color: var(--accent-pink);
+  color: var(--bg-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.CategoryForm-submit:hover:not(:disabled) {
+  background-color: var(--accent-pink-hover);
+}
+
+.CategoryForm-cancel:disabled,
+.CategoryForm-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .CategoryForm-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .CategoryForm-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .CategoryForm-actions {
+    flex-direction: column-reverse;
+  }
+
+  .CategoryForm-cancel,
+  .CategoryForm-submit {
+    width: 100%;
+  }
+}

@@ -1,0 +1,30 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --primary: #b35c6a;
+  --primary-dark: #b35c6a;
+  --pink: #f8e5e8;
+  --light-pink: #fff5f3;
+  --cream: #fffaf7;
+  --text: #30202b;
+  --muted: #765e6b;
+  --border: #f0dfe4;
+}
+
+* {
+  box-sizing: border-box;
+}

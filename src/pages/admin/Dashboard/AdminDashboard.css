@@ -1,0 +1,396 @@
+:root {
+  --bg-main: #faf7f2;
+  --bg-card: #ffffff;
+  --text-dark: #111827;
+  --text-muted: #6b7280;
+  --border-light: #e5e7eb;
+  --accent-pink: #cc7a87;
+  --accent-pink-hover: #b86975;
+  --success-bg: #d1fae5;
+  --success-text: #059669;
+  --pending-bg: #fef3c7;
+  --pending-text: #d97706;
+}
+
+.AdminDashboard {
+  /* background-color: var(--bg-main); */
+  /* min-height: 100vh; */
+  padding: 3rem 2rem 5rem 2rem;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.AdminDashboard-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: 1rem;
+}
+
+.AdminDashboard-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border-light);
+  border-top-color: var(--accent-pink);
+  border-radius: 50%;
+  animation: AdminDashboard-spin 1s linear infinite;
+}
+
+@keyframes AdminDashboard-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.AdminDashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+}
+
+.AdminDashboard-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.AdminDashboard-header h1 {
+  /* font-family: "Playfair Display", Georgia, serif; */
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.AdminDashboard-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.AdminDashboard-primaryButton {
+  background-color: var(--text-dark);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AdminDashboard-primaryButton:hover {
+  background-color: #000000;
+}
+
+/* Stats Section */
+.AdminDashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.AdminDashboard-stat {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.AdminDashboard-statLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.AdminDashboard-stat strong {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.AdminDashboard-statNote {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Quick Links Section */
+.AdminDashboard-quickLinks {
+  margin-bottom: 3rem;
+}
+
+.AdminDashboard-quickLinks h2 {
+  /* font-family: "Playfair Display", Georgia, serif; */
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+}
+
+.AdminDashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+  gap: 1.5rem;
+}
+
+.AdminDashboard-action {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.AdminDashboard-action:hover {
+  border-color: var(--accent-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(204, 122, 135, 0.1);
+}
+
+.AdminDashboard-actionIcon {
+  width: 40px;
+  height: 40px;
+  /* background-color: #fef0f2;
+  color: var(--accent-pink); */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.AdminDashboard-action span:not(.AdminDashboard-actionIcon):not(.AdminDashboard-arrow) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.AdminDashboard-action strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.AdminDashboard-action small {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.AdminDashboard-arrow {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.AdminDashboard-action:hover .AdminDashboard-arrow {
+  color: var(--accent-pink);
+}
+
+/* Recent Orders Section */
+.AdminDashboard-recent {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  margin-bottom: 3rem;
+}
+
+.AdminDashboard-sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.AdminDashboard-sectionHeader h2 {
+  /* font-family: "Playfair Display", Georgia, serif; */
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.AdminDashboard-textLink {
+  color: var(--accent-pink);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.AdminDashboard-textLink:hover {
+  text-decoration: underline;
+}
+
+.AdminDashboard-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f9fafb;
+  border: 1px dashed var(--border-light);
+  border-radius: 8px;
+}
+
+.AdminDashboard-empty span {
+  font-size: 2rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.AdminDashboard-empty h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-dark);
+}
+
+.AdminDashboard-empty p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Table */
+.AdminDashboard-tableWrapper {
+  overflow-x: auto;
+}
+
+.AdminDashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.AdminDashboard-table th {
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-light);
+  background-color: #fdfbf7;
+}
+
+.AdminDashboard-table td {
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.AdminDashboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.AdminDashboard-table td > span {
+  display: block;
+}
+
+.AdminDashboard-customerEmail {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.AdminDashboard-amount {
+  font-weight: 500;
+}
+
+/* Badges */
+.AdminDashboard-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #f3f4f6;
+  color: var(--text-muted);
+}
+
+.AdminDashboard-badge--paid,
+.AdminDashboard-badge--successful,
+.AdminDashboard-badge--delivered {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.AdminDashboard-badge--pending,
+.AdminDashboard-badge--processing {
+  background-color: var(--pending-bg);
+  color: var(--pending-text);
+}
+
+.AdminDashboard-badge--shipped,
+.AdminDashboard-badge--confirmed {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.AdminDashboard-viewLink {
+  color: var(--accent-pink);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.AdminDashboard-viewLink:hover {
+  text-decoration: underline;
+}
+
+.AdminDashboard-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .AdminDashboard {
+    padding: 2rem 1rem;
+  }
+  
+  .AdminDashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .AdminDashboard-recent {
+    padding: 1.5rem 1rem;
+  }
+
+  .AdminDashboard-table th,
+  .AdminDashboard-table td {
+    padding: 1rem 0.5rem;
+    font-size: 0.85rem;
+  }
+}

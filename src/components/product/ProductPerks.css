@@ -1,0 +1,98 @@
+:root {
+  --perk-bg: #fff3f5; /* Soft pink background matching screenshot */
+  --perk-color: #632133; /* Dark maroon for icons and text */
+  --perk-divider: #fbe5e9; /* Light pink for dividers */
+}
+
+.ProductPerks {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  padding-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ProductPerks-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 12px;
+  flex: 1;
+  padding: 0 5px;
+}
+
+/* Vertical dividers */
+.ProductPerks-item:not(:last-child) {
+  border-right: 1px solid var(--perk-divider);
+}
+
+.ProductPerks-item::last-child {
+  margin-left: 10px;
+  border-right: 1px solid var(--perk-divider);
+}
+
+.ProductPerks-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--perk-bg);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none; /* Removed the hard border to match the soft screenshot look */
+}
+
+.ProductPerks-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ProductPerks-content strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: var(--perk-color);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .ProductPerks-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .ProductPerks-content strong {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ProductPerks {
+    padding-top: 1.5rem;
+    gap: 0;
+  }
+
+  .ProductPerks-item {
+    gap: 10px;
+    padding: 0 2px;
+  }
+
+  .ProductPerks-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ProductPerks-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .ProductPerks-content strong {
+    font-size: 12px;
+  }
+}

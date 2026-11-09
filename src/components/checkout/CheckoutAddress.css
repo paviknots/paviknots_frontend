@@ -1,0 +1,55 @@
+.CheckoutAddress {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  max-width: 100%;
+}
+
+.CheckoutAddress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* margin-bottom: 0.75rem; */
+}
+
+.CheckoutAddress-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f1111;
+  margin: 0;
+}
+
+.CheckoutAddress-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.CheckoutAddress-link:hover {
+  text-decoration: underline;
+}
+
+.CheckoutAddress-text {
+  font-size: 0.95rem;
+  color: #0f1111;
+  margin: 0 0 1.25rem 0;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.CheckoutAddress-instructions {
+  display: inline-block;
+}

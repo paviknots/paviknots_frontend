@@ -1,0 +1,101 @@
+.ProductInfo-accordionItem {
+  width: 100%;
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.25rem 0;
+}
+
+.ProductInfo-accordionItem:first-of-type {
+  margin-top: 4%;
+}
+
+.ProductInfo-accordionHeader {
+  width: 100%;
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem 0;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.ProductInfo-accordionHeader h2 {
+  /* font-family: "Playfair Display", Georgia, serif; */
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.ProductInfo-chevron {
+  color: var(--text-muted);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.2s ease;
+}
+
+.ProductInfo-accordionHeader:hover .ProductInfo-chevron {
+  color: var(--accent-pink);
+}
+
+.ProductInfo-chevronRotate {
+  transform: rotate(180deg);
+}
+
+/* Specifications list flows cleanly with zero box backgrounds */
+.ProductInfo-specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0.5rem 0 1.25rem 0;
+  animation: fadeInSmooth 0.35s ease;
+}
+
+.ProductInfo-specRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed rgba(234, 223, 218, 0.6);
+}
+
+.ProductInfo-specRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ProductInfo-specRow span {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.ProductInfo-specRow strong {
+  color: var(--text-dark);
+  font-weight: 500;
+  text-align: right;
+  letter-spacing: 0.01em;
+}
+
+.ProductInfo-accordionContent {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem 0;
+  animation: fadeInSmooth 0.35s ease;
+}
+
+@keyframes fadeInSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -1,0 +1,445 @@
+:root {
+  --bg-main: #faf7f2;
+  --bg-white: #ffffff;
+  --text-dark: #0f1111;
+  --text-light: #565959;
+  --border-light: #d5d9d9;
+  --link-blue: #007185;
+  --link-hover: #c45500;
+  --accent-pink: #cc7a87;
+  --accent-pink-hover: #b86975;
+  --success-bg: #d1fae5;
+  --success-text: #059669;
+  --error-bg: #fee2e2;
+  --error-text: #b91c1c;
+  --pending-bg: #fef3c7;
+  --pending-text: #d97706;
+}
+
+.AdminOrders {
+  font-family: Arial, sans-serif;
+  color: var(--text-dark);
+  /* background-color: var(--bg-main); */
+  min-height: 100vh;
+  padding: 2rem 1.5rem 5rem 1.5rem;
+}
+
+.AdminOrders-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.AdminOrders-topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.AdminOrders-backLink {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  align-items: center;
+}
+
+.AdminOrders-backLink:hover {
+  text-decoration: underline;
+}
+
+.AdminOrders-refreshBtn {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+}
+
+.AdminOrders-refreshBtn:hover:not(:disabled) {
+  background-color: #f0f2f2;
+}
+
+.AdminOrders-refreshBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.AdminOrders-header {
+  margin-bottom: 2rem;
+}
+
+.AdminOrders-header h1 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0 0 0.5rem 0;
+}
+
+.AdminOrders-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.AdminOrders-alert {
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AdminOrders-alertError {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid #fecaca;
+}
+
+.AdminOrders-alertError button {
+  background: transparent;
+  border: 1px solid var(--error-text);
+  color: var(--error-text);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.AdminOrders-alertSuccess {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid #a7f3d0;
+}
+
+/* Summary Box */
+.AdminOrders-summaryBox {
+  display: flex;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-white);
+  gap: 2rem;
+}
+
+.AdminOrders-summaryCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-right: 1px solid var(--border-light);
+}
+
+.AdminOrders-summaryCol:last-child {
+  border-right: none;
+}
+
+.AdminOrders-summaryCol strong {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.AdminOrders-summaryCol span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Card Wrapper */
+.AdminOrders-card {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  background-color: var(--bg-white);
+  overflow: hidden;
+}
+
+.AdminOrders-cardHeader {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfdfd;
+}
+
+.AdminOrders-cardHeader h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.AdminOrders-cardHeader span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Filters */
+.AdminOrders-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--bg-white);
+  flex-wrap: wrap;
+}
+
+.AdminOrders-filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.AdminOrders-filterGroup label {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.AdminOrders-filterGroup input,
+.AdminOrders-filterGroup select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  outline: none;
+  min-width: 220px;
+}
+
+.AdminOrders-filterGroup input:focus,
+.AdminOrders-filterGroup select:focus {
+  border-color: var(--accent-pink);
+}
+
+.AdminOrders-clearBtn {
+  background: transparent;
+  border: none;
+  color: var(--link-blue);
+  font-size: 0.9rem;
+  padding: 0.6rem 0;
+  cursor: pointer;
+}
+
+.AdminOrders-clearBtn:hover {
+  text-decoration: underline;
+}
+
+/* States */
+.AdminOrders-loading,
+.AdminOrders-empty {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Table */
+.AdminOrders-tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.AdminOrders-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.AdminOrders-table th {
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-light);
+  background-color: #fdfdfd;
+}
+
+.AdminOrders-table td {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.AdminOrders-table tr:last-child td {
+  border-bottom: none;
+}
+
+.AdminOrders-orderNumber {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.AdminOrders-date {
+  color: var(--text-light);
+}
+
+.AdminOrders-customer {
+  display: flex;
+  flex-direction: column;
+}
+
+.AdminOrders-customerName {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.AdminOrders-customerEmail {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 0.2rem;
+}
+
+.AdminOrders-amount {
+  font-weight: 600;
+}
+
+.AdminOrders-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #f0f2f2;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.AdminOrders-badge--success,
+.AdminOrders-badge--delivered {
+  background-color: #198754;
+  color: white;
+}
+
+.AdminOrders-badge--confirmed {
+  background-color: #f9ce5b;
+  color: white;
+}
+
+.AdminOrders-badge--pending,
+.AdminOrders-badge--failed,
+.AdminOrders-badge--cancelled,
+.AdminOrders-badge--refunded {
+  background-color: #f05052;
+  color: white;
+}
+
+.AdminOrders-badge--shipped {
+  background-color: #1780e7;
+  color: white;
+}
+
+.AdminOrders-viewLink {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.AdminOrders-viewLink:hover {
+  text-decoration: underline;
+}
+
+.AdminOrders-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background-color: #fafafa;
+  border-top: 1px solid var(--border-light);
+}
+
+.AdminOrders-paginationInfo {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.AdminOrders-paginationControls {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.AdminOrders-pageButton,
+.AdminOrders-navigationButton {
+  background: var(--bg-white);
+  border: 1px solid var(--border-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.AdminOrders-pageButton:hover:not(:disabled),
+.AdminOrders-navigationButton:hover:not(:disabled) {
+  background-color: #f0f2f2;
+}
+
+.AdminOrders-pageButton--active {
+  background-color: var(--text-dark);
+  color: var(--bg-white);
+  border-color: var(--text-dark);
+  font-weight: 600;
+}
+
+.AdminOrders-pageButton--active:hover:not(:disabled) {
+  background-color: var(--text-dark); 
+}
+
+.AdminOrders-pageButton:disabled,
+.AdminOrders-navigationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #fafafa;
+}
+
+@media (max-width: 900px) {
+  .AdminOrders-summaryBox {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .AdminOrders-summaryCol {
+    flex: 1 1 calc(50% - 1rem);
+    border-right: none;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .AdminOrders-summaryCol:nth-last-child(-n + 2) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .AdminOrders {
+    padding: 1.5rem 1rem;
+  }
+  .AdminOrders-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .AdminOrders-filterGroup input,
+  .AdminOrders-filterGroup select {
+    min-width: 100%;
+  }
+  .AdminOrders-pagination {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

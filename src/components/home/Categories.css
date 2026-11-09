@@ -1,0 +1,220 @@
+.home-category-section-container {
+  padding: 24px 4% 20px;
+}
+
+.home-category-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home-category-heading-row h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+}
+
+.home-category-view-all-link {
+  color: #7a1b41;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.home-category-view-all-link:hover {
+  text-decoration: underline;
+}
+
+.home-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.home-category-card {
+  background: var(--pink, #ffe4e8);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.25s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.home-category-card:hover {
+  transform: translateY(-5px);
+}
+
+.home-category-card img {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.home-category-card div {
+  min-height: 37px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: #fff0f2;
+}
+
+.home-category-card h3 {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+.home-category-card span {
+  color: var(--primary, #bd2861);
+  font-size: 18px;
+}
+
+.home-category-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.home-category-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.home-category-modal h3 {
+  margin: 0 0 12px;
+  color: #57263f;
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-category-modal p {
+  color: #55404d;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-category-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.home-category-actions button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+}
+
+.home-category-cancel-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.home-category-cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.home-category-confirm-btn {
+  background: var(--primary, #bd2861);
+  color: white;
+}
+
+.home-category-confirm-btn:hover {
+  background: var(--primary-dark, #a02252);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------------------------------------------
+   MOBILE RESPONSIVENESS
+------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  /* Switch from 4 columns to 2 columns on tablets */
+  .home-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-category-section-container {
+    padding: 24px 5% 20px;
+  }
+
+  .home-category-heading-row h2 {
+    font-size: 20px;
+  }
+
+  .home-category-grid {
+    gap: 12px;
+  }
+
+  .home-category-card img {
+    height: 100px; /* Scales down image slightly for smaller phones */
+  }
+
+  .home-category-card h3 {
+    font-size: 13px; /* Prevents text wrapping on long category names */
+  }
+
+  .home-category-card div {
+    padding: 8px 4px;
+    gap: 6px;
+  }
+
+  /* Modal adjustments for small screens */
+  .home-category-modal {
+    padding: 24px 20px;
+  }
+
+  .home-category-modal h3 {
+    font-size: 20px;
+  }
+
+  .home-category-actions {
+    flex-direction: column-reverse; /* Stacks buttons and puts primary action on top */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .home-category-actions button {
+    width: 100%;
+  }
+}

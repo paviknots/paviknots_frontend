@@ -1,0 +1,568 @@
+:root {
+  --bg-cream: #fbf8f5;
+  --text-dark: #3a3229;
+  --text-muted: #6b5c4f;
+  --accent-pink: #d58b96;
+  --white: #ffffff;
+}
+
+.Hero {
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  padding: 5rem 1.5rem;
+  overflow: hidden;
+  position: relative;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.Hero-yarnBackground {
+  position: absolute;
+  top: 40%;
+  left: -5%;
+  width: 110%;
+  height: 200px;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.Hero-yarnBallBackground {
+  position: absolute;
+  top: 35%;
+  left: 2%;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.Hero-bgDecoration {
+  position: absolute;
+  color: var(--accent-pink);
+  opacity: 0.3;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+
+.Hero-bgDecoOne {
+  top: 12%;
+  left: 8%;
+}
+
+.Hero-bgDecoTwo {
+  bottom: 23%;
+  right: 5%;
+}
+
+.Hero-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 900px) {
+  .Hero-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0 2rem;
+  }
+  .Hero-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .Hero-valuesRow {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .Hero-visual {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+.Hero-ratingBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--white);
+  padding: 0.5rem 1.2rem;
+  border-radius: 99px;
+  box-shadow: 0 4px 15px rgba(58, 50, 41, 0.04);
+  margin-bottom: 2rem;
+}
+
+.Hero-ratingStars {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.Hero-ratingText {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.Hero-ratingText strong {
+  color: var(--text-dark);
+}
+
+.Hero-eyebrow {
+  color: var(--accent-pink);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.Hero-title {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.Hero-titleAccent {
+  display: inline-block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent-pink);
+  margin-top: 0.3rem;
+}
+
+.Hero-titleHeart {
+  position: absolute;
+  right: 15%;
+  top: 40%;
+  transform: rotate(15deg);
+  opacity: 0.8;
+}
+
+.Hero-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+}
+
+.Hero-buttonWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.Hero-button {
+  background-color: var(--accent-pink);
+  color: var(--white);
+  padding: 1.1rem 2.5rem;
+  border-radius: 99px;
+  text-decoration: none;
+  /* font-weight: 600; */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.Hero-button:hover {
+  transform: translateY(-2px);
+  background-color: #c47681;
+}
+
+.Hero-buttonAnnotation {
+  opacity: 0.7;
+  transform: translateY(5px);
+}
+
+.Hero-valuesRow {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.Hero-valueItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.Hero-valueIcon {
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #e8dbce;
+  border-radius: 8px;
+}
+
+.Hero-valueItem span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-dark);
+}
+
+.Hero-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hero-mobileCarousel {
+  display: none;
+}
+
+.Hero-collage {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 550px;
+}
+
+.Hero-handwrittenDeco {
+  position: absolute;
+  left: -17%;
+  top: 27%;
+  font-family: "Caveat", "Playfair Display", cursive;
+  font-size: 1.2rem;
+  color: #c8b7aa;
+  transform: rotate(-10deg);
+  line-height: 1.2;
+  z-index: 1;
+}
+
+.Hero-card {
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.Hero-polaroid {
+  background: var(--white);
+  padding: 12px 12px 25px 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.Hero-polaroidImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.Hero-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 60px;
+  height: 20px;
+  background-color: rgba(234, 187, 193, 0.7);
+  z-index: 5;
+}
+
+.Hero-cardMain {
+  width: 280px;
+  top: 10%;
+  left: 20%;
+  transform: rotate(2deg);
+  z-index: 2;
+}
+
+.Hero-cardMain .Hero-polaroidImage {
+  height: 280px;
+}
+
+.Hero-cardRight {
+  width: 200px;
+  top: -7%;
+  right: -5%;
+  transform: rotate(8deg);
+  z-index: 3;
+}
+
+.Hero-cardRight .Hero-polaroidImage {
+  height: 200px;
+}
+
+.Hero-cardLeft {
+  width: 180px;
+  bottom: 13%;
+  left: -2%;
+  transform: rotate(-6deg);
+  z-index: 4;
+}
+
+.Hero-cardLeft .Hero-polaroidImage {
+  height: 180px;
+}
+
+.Hero-doodleHeart {
+  position: absolute;
+  bottom: 10px;
+  right: -25px;
+  color: var(--accent-pink);
+  font-size: 1.2rem;
+  transform: rotate(15deg);
+}
+
+.Hero-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  z-index: 10;
+}
+
+.Hero-noteTop {
+  position: absolute;
+  top: 5%;
+  left: 0%;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(58, 50, 41, 0.06);
+  z-index: 6;
+  transform: rotate(-3deg);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #f2e9e0;
+}
+
+.Hero-notePin {
+  font-size: 1.2rem;
+}
+
+.Hero-noteLine {
+  width: 15px;
+  height: 2px;
+  background-color: var(--accent-pink);
+}
+
+.Hero-noteText {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.Hero-noteHeart {
+  color: var(--accent-pink);
+  font-size: 0.9rem;
+}
+
+.Hero-noteSquare {
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 120px;
+  height: 120px;
+  background: #fdf5f0;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Caveat", "Playfair Display", cursive;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.2;
+  transform: rotate(5deg);
+}
+
+.Hero-tapeNote {
+  top: -8px;
+  width: 45px;
+  height: 16px;
+  background-color: rgba(213, 139, 150, 0.4);
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.Hero-noteSquare span {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+@media (max-width: 899px) {
+  .Hero {
+    padding: 3rem 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .Hero-title{
+    margin-bottom: 0.8rem;
+  }
+  .Hero-description{
+    text-align: justify;
+    margin-bottom: 1rem;
+  }
+  .Hero-buttonAnnotation{
+    display: none;
+  }
+  .Hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+  .Hero-content {
+    order: 1;
+    gap: 0px;
+  }
+  .Hero-ratingBadge{
+    display: none;
+  }
+  .Hero-visual {
+    order: 2;
+    margin-top: 0rem;
+  }
+
+  .Hero-valuesRow {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* margin-top: rem; */
+    padding-top: 2rem;
+  }
+  .Hero-valueItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border-right: 1px solid #ebdace; */
+    gap: 0;
+  }
+  .Hero-valueItem:last-child {
+    border-right: none;
+  }
+  .Hero-valueIcon {
+    border-radius: 50%;
+    border: 1px solid #ebdace;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+  .Hero-valueItem span {
+    font-size: 0.65rem;
+    line-height: 1.2;
+  }
+  .Hero-collage {
+    display: none;
+  }
+  .Hero-mobileCarousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  .Hero-blobContainer {
+    position: relative;
+    width: 290px;
+    height: 290px;
+  }
+  .Hero-blobImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 55% 45% 60% 40% / 40% 50% 50% 60%;
+  }
+  .Hero-navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    color: var(--text-dark);
+  }
+  .Hero-navLeft {
+    left: -18px;
+  }
+  .Hero-navRight {
+    right: -18px;
+  }
+  .Hero-carouselDots {
+    display: flex;
+    gap: 8px;
+    margin-top: 1.5rem;
+  }
+  .Hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e8d0d3;
+  }
+  .Hero-dot.active {
+    background: #d58b96;
+  }
+  .Hero-mobileNote {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background: #fdf5f0;
+    padding: 12px;
+    border-radius: 8px;
+    font-family: "Caveat", "Playfair Display", cursive;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    z-index: 3;
+    transform: rotate(5deg);
+    width: 120px;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: var(--text-dark);
+  }
+  .Hero-mobileNoteTape {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 35px;
+    height: 12px;
+    background: rgba(213, 139, 150, 0.4);
+  }
+  .Hero-mobileNote span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+  }
+  .Hero-mobileDoodleLeft {
+    position: absolute;
+    top: 0%;
+    left: 5%;
+    z-index: 1;
+    opacity: 0.8;
+  }
+  .Hero-titleHeart,
+  .Hero-yarnBackground,
+  .Hero-yarnBallBackground {
+    display: none;
+  }
+}

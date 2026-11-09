@@ -1,0 +1,132 @@
+/* Footer.css */
+
+.footer-section {
+  padding: 48px 5% 24px;
+  background: linear-gradient(110deg, #562344, #713251);
+  color: white;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* --- Main Layout (Mobile First) --- */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+/* TABLET: 2 Columns */
+@media (min-width: 600px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* DESKTOP: 4 Columns */
+@media (min-width: 960px) {
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+  }
+}
+
+/* --- Brand Column (Column 1) --- */
+.footer-brand h2 {
+  margin: 0 0 4px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+.footer-brand small {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #f4dfe9;
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  max-width: 280px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #eaddd7;
+  margin: 0 0 16px 0;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social:hover {
+  opacity: 0.8;
+}
+
+/* --- Links Columns (Columns 2 & 3) --- */
+.footer-grid h3 {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-grid > div > a {
+  display: block;
+  width: fit-content;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: #eaddd7;
+  text-decoration: none;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer-grid > div > a:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+/* --- Contact Column (Column 4) --- */
+.footer-grid > div:last-child > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: #eaddd7;
+  font-size: 14px;
+}
+
+.footer-grid > div:last-child > div > p {
+  margin: 0;
+}
+
+/* --- Bottom Bar --- */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: #eaddd7;
+  text-align: center;
+}
+
+/* Desktop bottom bar layout */
+@media (min-width: 600px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}

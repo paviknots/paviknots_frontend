@@ -1,0 +1,812 @@
+:root {
+  --bg-cream: #faf7f2;
+  --text-dark: #3a3229;
+  --text-muted: #8a7168;
+  --accent-pink: #cc7a87;
+  --white: #ffffff;
+  --border-light: #ebdcd3;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.Register {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.Register-background {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.Register-visual {
+  flex: 0 0 50%;
+  width: 50%;
+  max-width: 50%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background: #eee4da;
+  box-sizing: border-box;
+}
+
+.Register-visualImage {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 38%;
+  object-fit: cover;
+}
+
+.Register-visualImage_2 {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  left: auto;
+  width: 50%;
+  height: 30%;
+  object-fit: cover;
+  filter: blur(1px);
+  transform: scale(1.02);
+}
+
+.Register-brand {
+  position: absolute;
+  top: 2.5rem;
+  left: 3.5rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-dark);
+  text-decoration: none;
+  z-index: 2;
+}
+
+.Register-visualContent {
+  position: absolute;
+  top: 35%;
+  left: 3.5rem;
+  transform: translateY(-50%);
+  max-width: 420px;
+  z-index: 2;
+}
+
+.Register-eyebrow {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-pink);
+  text-transform: uppercase;
+  margin: 0 0 1rem 0;
+}
+
+.Register-heading {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 4vw, 4rem);
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin: 0;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.Register-heading em {
+  font-style: italic;
+}
+
+.Register-heart {
+  position: absolute;
+  top: 15%;
+  right: 20px;
+  font-size: 2.2rem;
+  color: var(--accent-pink);
+  font-family: cursive;
+  transform: rotate(15deg);
+}
+
+.Register-line {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: var(--accent-pink);
+  margin: 1.5rem 0 1rem;
+}
+
+.Register-visualDescription {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.Register-panel {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 40px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.Register-back {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.Register-back:hover {
+  color: var(--accent-pink);
+}
+
+.Register-formContainer {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.Register-header {
+  margin-bottom: 2rem;
+}
+
+.Register-cardEyebrow {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-pink);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+}
+
+.Register-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem 0;
+}
+
+.Register-description {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.Register-error {
+  background-color: var(--white);
+  border: 1px solid rgba(213, 139, 150, 0.3);
+  color: #9e2a2b;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.Register-success {
+  background-color: #f1f8e9;
+  border: 1px solid rgba(139, 195, 74, 0.4);
+  color: #33691e;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.Register-google {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.Register-otpActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.25rem;
+}
+
+.Register-otpActions button {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.Register-otpActions button:hover:not(:disabled) {
+  color: var(--accent-pink);
+}
+
+.Register-otpActions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.Register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.Register-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Register-field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.Register-inputWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.Register-inputIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.Register-inputWrapper input {
+  width: 100%;
+  padding: 0.95rem 1rem 0.95rem 2.8rem;
+  background-color: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.Register-inputWrapper input:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 3px rgba(204, 122, 135, 0.12);
+}
+
+.Register-passwordToggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.Register-forgotWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.2rem;
+}
+
+.Register-forgot {
+  font-size: 0.8rem;
+  color: var(--accent-pink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.Register-forgot:hover {
+  text-decoration: underline;
+}
+
+.Register-submit {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 99px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 20px rgba(204, 122, 135, 0.25);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.Register-submit:hover:not(:disabled) {
+  background-color: #b86975;
+  transform: translateY(-2px);
+}
+
+.Register-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.Register-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.Register-divider span {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-light);
+}
+
+.Register-divider p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.Register-register {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0 0 2.5rem 0;
+  margin-top: 2rem;
+}
+
+.Register-register a {
+  color: var(--accent-pink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.Register-register a:hover {
+  color: #b86975;
+}
+
+.Register-benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed var(--border-light);
+  padding-top: 2rem;
+}
+
+.Register-benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent-pink);
+}
+
+.Register-benefit span:last-child {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.Register-leaf {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.Register-benefitDivider {
+  width: 1px;
+  height: 25px;
+  background-color: var(--border-light);
+}
+
+@media (max-width: 1024px) {
+  .Register-panel {
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .Register {
+    min-height: 100vh;
+    background: var(--bg-cream);
+    overflow-x: hidden;
+  }
+
+  .Register-background {
+    height: auto;
+    min-height: 100dvh;
+    flex-direction: column;
+  }
+
+  .Register-visual {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    height: 330px;
+    min-height: 330px;
+    background: var(--bg-cream);
+  }
+
+  .Register-visualImage {
+    display: none;
+  }
+
+  .Register-visualImage_2 {
+    display: block;
+    position: absolute;
+    top: -35px;
+    right: -80px;
+    left: auto;
+    width: 115%;
+    height: 260px;
+    object-fit: cover;
+    filter: blur(2px);
+    transform: scale(1.05);
+    opacity: 0.85;
+  }
+
+  .Register-visual::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 150px;
+    background: linear-gradient(
+      to bottom,
+      rgba(250, 247, 242, 0),
+      var(--bg-cream)
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .Register-brand {
+    top: 28px;
+    left: 24px;
+    font-size: 1.8rem;
+    z-index: 5;
+  }
+
+  .Register-visualContent {
+    position: absolute;
+    top: auto;
+    bottom: 25px;
+    left: 24px;
+    width: calc(100% - 48px);
+    max-width: none;
+    transform: none;
+    z-index: 4;
+  }
+
+  .Register-eyebrow {
+    margin-bottom: 10px;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+  .Register-heading {
+    max-width: 350px;
+    font-size: clamp(2.4rem, 10vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+  }
+
+  .Register-heart {
+    display: none;
+  }
+
+  .Register-line {
+    width: 48px;
+    margin: 16px 0 12px;
+  }
+
+  .Register-visualDescription {
+    max-width: 320px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .Register-panel {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    padding: 25px 24px 45px;
+    border-radius: 0;
+    background: var(--bg-cream);
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .Register-back {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    display: flex;
+    font-size: 0.75rem;
+    z-index: 5;
+  }
+
+  .Register-formContainer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .Register-header {
+    margin-bottom: 28px;
+  }
+
+  .Register-cardEyebrow {
+    margin-bottom: 8px;
+    font-size: 0.65rem;
+    letter-spacing: 0.17em;
+  }
+
+  .Register-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+  }
+
+  .Register-description {
+    max-width: 320px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .Register-error,
+  .Register-success {
+    margin-bottom: 18px;
+    padding: 0.75rem 0.85rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+  }
+
+  .Register-form {
+    gap: 20px;
+  }
+
+  .Register-field {
+    gap: 7px;
+  }
+
+  .Register-field label {
+    font-size: 0.8rem;
+  }
+
+  .Register-inputWrapper input {
+    height: 55px;
+    padding: 0.85rem 3rem 0.85rem 2.75rem;
+    border-radius: 9px;
+    font-size: 0.85rem;
+  }
+
+  .Register-inputIcon {
+    left: 15px;
+  }
+
+  .Register-passwordToggle {
+    right: 11px;
+  }
+
+  .Register-forgotWrapper {
+    margin-top: 7px;
+  }
+
+  .Register-forgot {
+    font-size: 0.75rem;
+  }
+
+  .Register-submit {
+    height: 56px;
+    margin-top: 2px;
+    border-radius: 9px;
+    font-size: 0.95rem;
+    box-shadow: 0 7px 18px rgba(204, 122, 135, 0.18);
+  }
+
+  .Register-submit:hover:not(:disabled) {
+    transform: none;
+  }
+
+  .Register-divider {
+    margin: 25px 0 22px;
+    gap: 13px;
+  }
+
+  .Register-divider p {
+    font-size: 0.75rem;
+  }
+
+  .Register-register {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+  }
+
+  .Register-benefits {
+    margin-top: 32px;
+    padding-top: 20px;
+    gap: 0;
+  }
+
+  .Register-benefit {
+    gap: 6px;
+  }
+
+  .Register-benefit svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .Register-benefit span:last-child {
+    font-size: 0.65rem;
+  }
+
+  .Register-leaf {
+    font-size: 1rem;
+  }
+
+  .Register-benefitDivider {
+    height: 25px;
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Register-visual {
+    height: 315px;
+    min-height: 315px;
+  }
+
+  .Register-cardEyebrow {
+    font-size: 0.85rem;
+  }
+
+  .Register-visualImage_2 {
+    top: -25px;
+    right: -70px;
+    width: 125%;
+    height: 235px;
+  }
+
+  .Register-brand {
+    top: 22px;
+    left: 20px;
+    font-size: 1.65rem;
+  }
+
+  .Register-back {
+    top: 20px;
+    right: 20px;
+  }
+
+  .Register-visualContent {
+    left: 20px;
+    bottom: 22px;
+    width: calc(100% - 40px);
+  }
+
+  .Register-eyebrow {
+    font-size: 0.85rem;
+  }
+
+  .Register-heading {
+    margin-top: 20px;
+    font-size: 2.55rem;
+  }
+
+  .Register-visualDescription {
+    max-width: 320px;
+    font-size: 1rem;
+  }
+
+  .Register-panel {
+    padding: 20px 20px 35px;
+  }
+
+  .Register-title {
+    font-size: 1.9rem;
+  }
+
+  .Register-description {
+    font-size: 1rem;
+  }
+
+  .Register-inputWrapper input {
+    height: 53px;
+    font-size: 0.85rem;
+  }
+
+  .Register-forgot {
+    font-size: 0.95rem;
+  }
+
+  .Register-benefitDivider {
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .Register-visual {
+    height: 285px;
+    min-height: 285px;
+  }
+
+  .Register-heading {
+    font-size: 2.25rem;
+  }
+
+  .Register-visualDescription {
+    font-size: 0.78rem;
+  }
+
+  .Register-title {
+    font-size: 1.7rem;
+  }
+
+  .Register-benefits {
+    display: none;
+  }
+}

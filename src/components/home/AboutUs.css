@@ -1,0 +1,411 @@
+/* --- GLOBAL/RESET --- */
+.AboutPage {
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+.About-story-section {
+  /* padding: 5rem 2rem; */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #ffffff;
+}
+
+.About-story-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  gap: 4rem;
+}
+
+.About-story-imageWrapper {
+  flex: 1;
+  position: relative;
+}
+
+.About-story-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  aspect-ratio: 4/5;
+  background-color: #f0f0f0; /* Fallback before image loads */
+}
+
+.About-story-image-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background-color: #af2851;
+  color: white;
+  /* padding: 1.5rem; */
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(175, 40, 81, 0.3);
+  width: 100px;
+  height: 100px;
+}
+
+.About-story-image-badge span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.About-story-text {
+  flex: 1;
+}
+
+.About-story-text h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+}
+
+.About-story-text p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.About-signature {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.About-signature-name {
+  font-size: 1.5rem;
+  font-family:
+    "Brush Script MT", cursive, sans-serif; /* Adds a handmade feel */
+  color: #af2851;
+}
+
+.About-signature-title {
+  font-size: 0.9rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.About-values-section {
+  /* padding: 5rem 2rem; */
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  background-color: #fff0ec;
+}
+
+.About-values-header {
+  text-align: center;
+}
+
+.About-values-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #54263e;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.About-values-header p {
+  color: #666;
+  margin: 0;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.About-values-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.About-value-card {
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.About-value-card:hover {
+  transform: translateY(-5px);
+}
+
+.About-value-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #af2851;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.About-value-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.About-value-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* --- CTA SECTION --- */
+.About-cta-section {
+  padding: 6rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.About-cta-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.About-cta-container h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.About-cta-container p {
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.About-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #af2851;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.About-btn-primary:hover {
+  background-color: #8c1f40;
+}
+
+.About-hero {
+  width: 100%;
+  min-height: 390px;
+  padding: 130px 24px 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff0ec;
+  border-bottom: 1px solid #f4dfda;
+}
+
+.About-hero-content {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.About-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  color: #a52b57;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.About-title {
+  color: #54263e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -1.8px;
+  margin: 0;
+}
+
+.About-title span {
+  color: #bd3268;
+  font-weight: 500;
+}
+
+.About-subtitle {
+  max-width: 800px;
+  margin: 25px auto 0;
+  color: #71636a;
+  font-size: 17px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.About-hero-content-logo {
+  width: 50%;
+}
+
+.About-hero-content-logo img {
+  width: 100%;
+}
+
+.About-hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+  padding: 13px 24px;
+  border: 1px solid #bd3268;
+  border-radius: 50px;
+  color: #a52b57;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.About-hero-link:hover {
+  background: #bd3268;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablet & Smaller Screens - Ensuring Sections Don't Touch Edges */
+@media (max-width: 1150px) {
+  .About-story-section,
+  .About-values-section,
+  .About-cta-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  .About-hero {
+    min-height: auto;
+    padding: 65px 22px 70px;
+  }
+
+  .About-eyebrow {
+    font-size: 12px; /* Overrides the 3rem desktop size for mobile */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .About-title {
+    font-size: clamp(32px, 8vw, 42px); /* Adjusted for better mobile fit */
+    letter-spacing: -1px;
+    line-height: 1.2;
+  }
+
+  .About-subtitle {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .About-hero-link {
+    margin-top: 25px;
+  }
+
+  .About-story-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .About-story-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .About-story-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .About-story-text p {
+    text-align: justify;
+  }
+
+  .About-story-image-badge {
+    bottom: -15px;
+    right: -10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .About-story-image-badge svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .About-values-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .About-values-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .About-values-header p {
+    margin-bottom: 2.5rem;
+  }
+
+  .About-values-grid {
+    grid-template-columns: 1fr; /* Forces a neat single column on phones */
+    gap: 1.5rem;
+  }
+
+  .About-cta-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .About-cta-container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 380px) {
+  .About-title {
+    font-size: 30px;
+  }
+
+  .About-hero {
+    padding: 55px 16px 60px;
+  }
+
+  .About-story-text h2,
+  .About-values-header h2 {
+    font-size: 1.8rem;
+  }
+}

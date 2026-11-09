@@ -1,0 +1,99 @@
+.NotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #ffffff;
+  padding: 2rem;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+.NotFound-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 520px;
+}
+
+.NotFound-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 96px;
+  border: 1px solid #e8ddd5;
+  border-radius: 50%;
+  color: #726257;
+  margin-bottom: 1.5rem;
+}
+
+.NotFound-code {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #c2336e;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.NotFound h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #333130;
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.NotFound h1 em {
+  font-style: normal;
+}
+
+.NotFound p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #847670;
+  margin: 0 0 2rem 0;
+}
+
+.NotFound-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.NotFound-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.875rem 1.75rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.NotFound-home:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 480px) {
+  .NotFound {
+    min-height: 60vh;
+  }
+  .NotFound h1 {
+    font-size: 1.5rem;
+  }
+  .NotFound p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,746 @@
+:root {
+  --pc-bg-soft: #fff6f8; /* Extremely soft, warm cream/pink background */
+  --pc-primary: #a8234e; /* Vibrant ruby/pink for the button */
+  --pc-primary-dark: #8c1a3f;
+  --pc-text-dark: #381822; /* Deep maroon/brown for text */
+  --pc-text-muted: #6b5c62;
+  --pc-icon-bg: #feebe6;
+  --pc-border: #d4a9b6;
+}
+
+.PersonalizedPage {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  overflow-x: hidden;
+  background-color: #feebe6;
+}
+
+.PC-hero {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0% 4%;
+  padding-bottom: 6%;
+  z-index: 1;
+  padding-top: 2%;
+}
+
+.PC-heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 100%;
+  gap: 60px;
+}
+
+/* --- Left Side: Image --- */
+.PC-heroImageWrapper {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.PC-heroImage {
+  width: 90%;
+  object-fit: contain;
+}
+
+.PC-heroContentWrapper {
+  flex: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  /* margin-top: 100px; */
+}
+
+.PC-heroText {
+  display: flex;
+  flex-direction: column;
+}
+
+.PC-preTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--pc-text-dark);
+  margin: 0 0 6px 0;
+  letter-spacing: 0.5px;
+  font-family: "Dancing Script", cursive;
+}
+
+.PC-title {
+  position: relative;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 800;
+  color: var(--pc-text-dark);
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  display: inline-block;
+  width: fit-content;
+}
+
+.PC-title-underline {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+}
+
+.PC-subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--pc-text-muted);
+  max-width: 550px;
+  margin: 0;
+}
+
+/* --- Steps Row --- */
+.PC-heroSteps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 15px;
+}
+
+.PC-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.PC-stepIconWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.PC-stepIcon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--pc-icon-bg);
+  color: var(--pc-text-dark);
+  border-radius: 16px; /* Soft rounded square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.PC-stepLine {
+  position: absolute;
+  top: 50%;
+  left: 65%; /* Starts right after the icon */
+  width: 80%; /* Stretches to the next icon */
+  height: 2px;
+  border-top: 2px dashed #e8c6ce;
+  z-index: 1;
+}
+
+.PC-step h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--pc-text-dark);
+  margin: 0 0 6px 0;
+  line-height: 1.2;
+}
+
+.PC-step p {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--pc-text-muted);
+  margin: 0;
+}
+
+/* --- Action Buttons Row --- */
+.PC-heroActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.PC-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.PC-btnPrimary {
+  background-color: var(--pc-primary);
+  color: white;
+  border: 2px solid var(--pc-primary);
+}
+
+.PC-btnPrimary:hover {
+  background-color: var(--pc-primary-dark);
+  border-color: var(--pc-primary-dark);
+}
+
+.PC-btnOutline {
+  background-color: transparent;
+  color: var(--pc-text-dark);
+  border: 1px solid #c9b1b8;
+}
+
+.PC-btnOutline:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 1100px) {
+  .PC-heroContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .PC-heroImageWrapper {
+    width: 100%;
+    order: -1; /* Keep the image at the top on mobile/tablet */
+  }
+
+  .PC-heroImage {
+    max-width: 450px;
+  }
+
+  .PC-heroContentWrapper {
+    align-items: center;
+  }
+
+  .PC-subtitle {
+    margin: 0 auto;
+  }
+
+  .PC-title {
+    margin: 0 auto 20px auto;
+  }
+
+  .PC-heroActions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .PC-hero {
+    padding: 12% 5%;
+  }
+
+  .PC-heroSteps {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .PC-stepLine {
+    display: none; /* Hide horizontal dashed lines when stacked vertically */
+  }
+
+  .PC-title {
+    font-size: 32px;
+  }
+
+  .PC-heroActions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .PC-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ====================================================
+   NEW SECTIONS CSS (Appended)
+======================================================= */
+
+/* --- Special Moments Section --- */
+.PC-section-moments {
+  padding: 20px 5% 60px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.PC-moments-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.PC-moments-text {
+  flex: 0 0 35%;
+  padding-right: 30px;
+}
+
+.PC-moments-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--pc-primary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.PC-moments-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: var(--pc-text-dark);
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+.PC-moments-text p {
+  font-size: 14px;
+  color: var(--pc-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.PC-moments-divider {
+  width: 1px;
+  height: 100px;
+  background-color: #f0e6e8;
+  margin: 0 30px;
+}
+
+.PC-moments-grid {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.PC-moment-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.PC-moment-icon {
+  color: var(--pc-primary);
+}
+
+.PC-moment-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pc-text-dark);
+  line-height: 1.3;
+}
+
+/* --- Why Choose Us Section --- */
+.PC-section-why {
+  padding: 60px 5%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.PC-why-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.PC-why-line {
+  height: 1px;
+  width: 60px;
+  background-color: var(--pc-primary);
+  opacity: 0.5;
+}
+
+.PC-why-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: var(--pc-text-dark);
+  margin: 0;
+}
+
+.PC-why-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.PC-why-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.PC-why-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--pc-icon-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pc-primary);
+  margin-bottom: 20px;
+}
+
+.PC-why-item h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--pc-text-dark);
+  margin: 0 0 8px 0;
+}
+
+.PC-why-item p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--pc-text-muted);
+  margin: 0;
+  max-width: 220px;
+}
+
+/* --- Testimonials Section --- */
+.PC-section-testimonials {
+  padding: 40px 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.PC-testimonials-container {
+  background: white;
+  border-radius: 20px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.PC-testimonials-left {
+  flex: 0 0 35%;
+}
+
+.PC-testimonials-left h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: var(--pc-text-dark);
+  margin: 12px 0 0 0;
+  line-height: 1.2;
+}
+
+.PC-testimonials-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+}
+
+.PC-quote-mark {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  color: var(--pc-primary);
+  line-height: 0.8;
+  opacity: 0.8;
+}
+
+.PC-testimonial-content p {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--pc-text-dark);
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  max-width: 450px;
+}
+
+.PC-testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.PC-testimonial-author strong {
+  font-size: 15px;
+  color: var(--pc-text-dark);
+}
+
+.PC-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.PC-testimonial-controls {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+.PC-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0c8ce;
+  background: transparent;
+  color: var(--pc-text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.PC-nav-btn:hover {
+  background: #f5f5f5;
+}
+
+.PC-nav-btn-active {
+  background: var(--pc-primary);
+  border-color: var(--pc-primary);
+  color: white;
+}
+
+.PC-nav-btn-active:hover {
+  background: var(--pc-primary-dark);
+}
+
+/* --- Bottom CTA Card --- */
+.PC-section-cta {
+  padding: 60px 5% 100px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.PC-cta-card {
+  background: linear-gradient(135deg, #c02b5a, #8c1f3f);
+  border-radius: 24px;
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  box-shadow: 0 15px 35px rgba(175, 40, 81, 0.2);
+}
+
+.PC-cta-imageWrapper {
+  flex: 0 0 200px;
+}
+
+.PC-cta-image {
+  width: 100%;
+  object-fit: contain;
+  transform: rotate(-10deg);
+}
+
+.PC-cta-content {
+  flex: 1;
+}
+
+.PC-cta-content h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 12px 0;
+}
+
+.PC-cta-content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 24px 0;
+}
+
+.PC-btn-white {
+  background-color: white;
+  color: var(--pc-primary);
+  border: none;
+}
+
+.PC-btn-white:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-2px);
+}
+
+/* ====================================================
+   MOBILE RESPONSIVENESS FOR NEW SECTIONS
+======================================================= */
+
+@media (max-width: 1100px) {
+  .PC-moments-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .PC-moments-text {
+    padding-right: 0;
+  }
+
+  .PC-moments-divider {
+    display: none;
+  }
+
+  .PC-moments-grid {
+    width: 100%;
+  }
+
+  .PC-why-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .PC-why-item {
+    flex: 0 0 40%;
+  }
+
+  .PC-testimonials-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .PC-testimonials-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .PC-quote-mark {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.1;
+  }
+
+  .PC-testimonial-controls {
+    margin: 20px auto 0 auto;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .PC-moments-grid {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    gap: 30px;
+  }
+
+  .PC-why-header h2 {
+    font-size: 26px;
+  }
+
+  .PC-why-item {
+    flex: 0 0 100%;
+  }
+
+  .PC-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .PC-cta-imageWrapper {
+    flex: 0 0 150px;
+  }
+
+  .PC-cta-content h2 {
+    font-size: 26px;
+  }
+}
+
+.PC-section-howItWorks {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fcf9f9; /* or match your theme background */
+}
+
+.PC-how-header {
+  margin-bottom: 3rem;
+}
+
+.PC-how-header p {
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.PC-how-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.PC-how-step-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PC-how-step-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 40px;
+  height: 40px;
+  background-color: #af2851; /* Your primary brand color */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.PC-how-icon-large {
+  color: #af2851;
+  margin-bottom: 1rem;
+}
+
+.PC-how-step-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.PC-how-step-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

@@ -1,0 +1,46 @@
+/* Announcement */
+
+.announcement-bar {
+  min-height: 30px;
+  padding: 6px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  background: linear-gradient(90deg, #78385e, #9b4c76);
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.announcement-bar p {
+  margin: 0;
+}
+
+.announcement-close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  height: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .announcement-bar {
+    padding: 8px 30px 8px 15px;
+    font-size: 12px;
+    gap: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .announcement-close {
+    right: 5px;
+  }
+}
