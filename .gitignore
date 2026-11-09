@@ -27,3 +27,8 @@ dist-ssr
 .env.*
 !.env.example
 .DS_Store
+
+node_modules/
+.env
+.env.*
+!.env.example
