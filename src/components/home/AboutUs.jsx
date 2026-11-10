@@ -95,7 +95,7 @@ function AboutUs() {
               creation is made with care.
             </p>
             <div className="About-signature">
-              <span className="About-signature-name">Pavithra</span>
+              <span className="About-signature-name">Pavithra Narayanan</span>
               <span className="About-signature-title">
                 Founder & Maker, PaviKnots
               </span>

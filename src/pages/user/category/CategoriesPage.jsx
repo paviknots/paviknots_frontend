@@ -77,10 +77,8 @@ export default function CategoriesPage() {
               ? data.data
               : [];
 
-        // Display only active categories
         setCategories(categoryList.filter((cat) => cat.isActive !== false));
       } catch (err) {
-        console.error("Failed to fetch categories:", err);
         setError("Unable to load categories. Please try again.");
       } finally {
         setLoading(false);

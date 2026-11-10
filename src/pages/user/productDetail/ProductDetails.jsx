@@ -47,11 +47,6 @@ const ProductDetails = () => {
 
         setProduct(data.product || data);
       } catch (error) {
-        console.error(
-          "Failed to load product:",
-          error.response?.data || error.message,
-        );
-
         setError("We couldn't find this creation.");
       } finally {
         setLoading(false);
@@ -85,11 +80,6 @@ const ProductDetails = () => {
         setCartToast(false);
       }, 3500);
     } catch (error) {
-      console.error(
-        "Failed to add product to cart:",
-        error.response?.data || error.message,
-      );
-
       setCartMessage(
         error.response?.data?.message ||
           "Unable to add this item to your cart.",

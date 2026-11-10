@@ -123,8 +123,6 @@ const Orders = () => {
     setSearchQuery(searchInput);
   };
 
-  console.log("orders.jsx", orders);
-
   return (
     <main className="OrdersPage">
       <div className="OrdersPage-container">
@@ -531,8 +529,7 @@ const Orders = () => {
                             {item.name}
                           </Link>
                           <div className="OrdersPage-itemPrice">
-                            ₹ {" "}
-                            {/* <FaIndianRupeeSign /> */}
+                            ₹ {/* <FaIndianRupeeSign /> */}
                             {item.unitPrice}
                           </div>
 

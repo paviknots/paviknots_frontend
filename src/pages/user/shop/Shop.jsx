@@ -75,7 +75,7 @@ const Shop = () => {
         const data = await getCategories();
         setCategories(data.categories || data || []);
       } catch (error) {
-        console.error("Failed to load categories:", error);
+        console.error("Failed to load categories:");
       }
     };
     loadCategories();
@@ -130,7 +130,6 @@ const Shop = () => {
           },
         );
       } catch (error) {
-        console.error("Failed to load products:", error);
         setError("We couldn't load the creations right now.");
         setProducts([]);
       } finally {
@@ -266,7 +265,6 @@ const Shop = () => {
         setCartToast(false);
       }, 3500);
     } catch (error) {
-      console.error("Failed to add product to cart:", error);
       setCartError(
         error.response?.data?.message ||
           "Unable to add this item to your cart.",

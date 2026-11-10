@@ -80,7 +80,6 @@ function OrderDetails() {
         }
         if (isMounted) {
           setOrder(response.data);
-          console.log("order", response.data);
         }
       } catch (err) {
         if (isMounted) {
@@ -163,7 +162,6 @@ function OrderDetails() {
   }
 
   const refund = order.payment;
-  console.log("refund ", refund);
   const isCancelled = order.status === "CANCELLED";
   const address = order.address;
   const payment = order.payment;

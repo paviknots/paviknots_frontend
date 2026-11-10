@@ -20,10 +20,7 @@ const Cart = () => {
 
       setCart(response.data);
     } catch (error) {
-      console.error(
-        "Failed to load cart:",
-        error.response?.data || error.message,
-      );
+      console.error("Failed to load cart:");
     } finally {
       setLoading(false);
     }

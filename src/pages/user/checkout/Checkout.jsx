@@ -58,11 +58,6 @@ const Checkout = () => {
 
       setSelectedAddress((currentAddress) => currentAddress || defaultAddress);
     } catch (error) {
-      console.error(
-        "Failed to load checkout:",
-        error.response?.data || error.message,
-      );
-
       toast.error(error.response?.data?.message || "Unable to load checkout.");
     } finally {
       setLoading(false);
@@ -128,7 +123,6 @@ const Checkout = () => {
             });
             navigate(`/order-success?order=${checkoutData.order.orderNumber}`);
           } catch (error) {
-            console.error("Payment verification failed:", error);
             toast.error(
               error.response?.data?.message ||
                 "Payment verification failed. Please contact support.",
@@ -155,7 +149,6 @@ const Checkout = () => {
                   "Checkout cancelled. You can try again.",
               );
             } catch (error) {
-              console.error("Checkout cancellation check failed:", error);
               toast.error(
                 error.response?.data?.message ||
                   "Unable to check payment status. Please try again shortly.",
@@ -170,16 +163,12 @@ const Checkout = () => {
       const razorpay = new window.Razorpay(options);
 
       razorpay.on("payment.failed", (paymentResponse) => {
-        console.error("Razorpay payment failed:", paymentResponse.error);
-
         toast.error(paymentResponse.error?.description || "Payment failed.");
-
         setPlacingOrder(false);
       });
 
       razorpay.open();
     } catch (error) {
-      console.error("Checkout failed:", error);
       if (error.response?.data?.code === "CHECKOUT_IN_PROGRESS" && !isForce) {
         setShowOverrideModal(true);
         setPlacingOrder(false);

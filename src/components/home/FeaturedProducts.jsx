@@ -79,7 +79,12 @@ export function FeaturedProducts() {
 
                 <div className="featured-priceRow">
                   <strong className="featured-currentPrice">
-                    ₹{Number(product.discountedPrice).toLocaleString("en-IN")}
+                    ₹
+                    {Number(
+                      product.discountedPrice > 0
+                        ? product.discountedPrice
+                        : product.originalPrice,
+                    ).toLocaleString("en-IN")}
                   </strong>
 
                   {hasDiscount && (
