@@ -385,6 +385,16 @@
   background-color: var(--border-light);
 }
 
+.Login-googleButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.Login-googleButton iframe {
+  max-width: 100%;
+}
 @media (max-width: 1024px) {
   .Login-panel {
     padding: 2.5rem;

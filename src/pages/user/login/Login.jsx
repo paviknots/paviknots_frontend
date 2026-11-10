@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FiArrowRight, FiEye, FiEyeOff, FiLock, FiMail } from "react-icons/fi";
 import toast from "react-hot-toast";
@@ -21,6 +21,23 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
 
   const redirectTo = location.state?.from || "/";
+
+  const googleButtonRef = useRef(null);
+  const [googleButtonWidth, setGoogleButtonWidth] = useState(900);
+
+  useEffect(() => {
+    const container = googleButtonRef.current;
+
+    if (!container) return;
+
+    const observer = new ResizeObserver(([entry]) => {
+      setGoogleButtonWidth(Math.floor(entry.contentRect.width));
+    });
+
+    observer.observe(container);
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -215,7 +232,9 @@ const Login = () => {
               onError={() => toast.error("Google sign-in failed.")}
               theme="outline"
               text="signin_with"
-              width="100%"
+              shape="rectangular"
+              size="large"
+              width="inherit"
             />
 
             <div className="Login-divider">

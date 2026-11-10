@@ -54,7 +54,7 @@
 }
 
 .AdminProducts-addBtn {
-  background-color: var(--text-dark);
+  background-color: var(--primary);
   color: var(--bg-white);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
@@ -66,9 +66,6 @@
   transition: background-color 0.2s ease;
 }
 
-.AdminProducts-addBtn:hover {
-  background-color: #000000;
-}
 
 .AdminProducts-refreshBtn {
   background: transparent;
