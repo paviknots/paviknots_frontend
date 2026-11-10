@@ -234,7 +234,7 @@ const Login = () => {
               text="signin_with"
               shape="rectangular"
               size="large"
-              width="inherit"
+              width={String(googleButtonWidth)}
             />
 
             <div className="Login-divider">
